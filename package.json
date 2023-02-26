@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/string-base-replace-before",
-  "version": null,
+  "version": "0.0.0",
   "description": "Replace the substring before the first occurrence of a specified search string.",
   "license": "Apache-2.0",
   "author": {
@@ -13,9 +13,6 @@
       "url": "https://github.com/stdlib-js/stdlib/graphs/contributors"
     }
   ],
-  "bin": {
-    "replace-before": "./bin/cli"
-  },
   "main": "./lib",
   "directories": {
     "benchmark": "./benchmark",
@@ -39,27 +36,11 @@
   "bugs": {
     "url": "https://github.com/stdlib-js/stdlib/issues"
   },
-  "dependencies": {
-    "@stdlib/assert-is-regexp-string": "^0.0.9",
-    "@stdlib/assert-is-string": "^0.0.8",
-    "@stdlib/cli-ctor": "^0.0.3",
-    "@stdlib/fs-read-file": "^0.0.8",
-    "@stdlib/process-read-stdin": "^0.0.7",
-    "@stdlib/regexp-eol": "^0.0.7",
-    "@stdlib/streams-node-stdin": "^0.0.7",
-    "@stdlib/string-format": "^0.0.3",
-    "@stdlib/types": "^0.0.14",
-    "@stdlib/utils-regexp-from-string": "^0.0.9"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "@stdlib/assert-is-browser": "^0.0.8",
-    "@stdlib/assert-is-windows": "^0.0.7",
+    "@stdlib/assert-is-string": "^0.0.8",
     "@stdlib/bench": "^0.0.12",
-    "@stdlib/process-exec-path": "^0.0.7",
-    "@stdlib/string-from-code-point": "^0.0.9",
-    "@stdlib/string-replace": "^0.0.11",
     "tape": "git+https://github.com/kgryte/tape.git#fix/globby",
-    "proxyquire": "^2.0.0",
     "istanbul": "^0.4.1",
     "tap-min": "git+https://github.com/Planeshifter/tap-min.git"
   },
@@ -85,6 +66,7 @@
     "utility",
     "utils",
     "util",
+    "base",
     "string",
     "str",
     "replace",

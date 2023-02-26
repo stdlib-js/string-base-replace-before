@@ -32,108 +32,19 @@ tape( 'main export is a function', function test( t ) {
 	t.end();
 });
 
-tape( 'the function throws an error if not provided a string as its first argument', function test( t ) {
-	var values;
-	var i;
-
-	values = [
-		5,
-		NaN,
-		null,
-		void 0,
-		true,
-		[],
-		{},
-		function noop() {}
-	];
-
-	for ( i = 0; i < values.length; i++ ) {
-		t.throws( badValue( values[i] ), TypeError, 'throws an error when provided '+values[i] );
-	}
-	t.end();
-
-	function badValue( value ) {
-		return function badValue() {
-			replaceBefore( value, 'beep', 'foo' );
-		};
-	}
-});
-
-tape( 'the function throws an error if not provided a string as its second argument', function test( t ) {
-	var values;
-	var i;
-
-	values = [
-		5,
-		NaN,
-		null,
-		void 0,
-		true,
-		[],
-		{},
-		function noop() {}
-	];
-
-	for ( i = 0; i < values.length; i++ ) {
-		t.throws( badValue( values[i] ), TypeError, 'throws an error when provided '+values[i] );
-	}
-	t.end();
-
-	function badValue( value ) {
-		return function badValue() {
-			replaceBefore( 'beep boop', value, 'foo' );
-		};
-	}
-});
-
-tape( 'the function throws an error if not provided a string as its third argument', function test( t ) {
-	var values;
-	var i;
-
-	values = [
-		5,
-		NaN,
-		null,
-		void 0,
-		true,
-		[],
-		{},
-		function noop() {}
-	];
-
-	for ( i = 0; i < values.length; i++ ) {
-		t.throws( badValue( values[i] ), TypeError, 'throws an error when provided '+values[i] );
-	}
-	t.end();
-
-	function badValue( value ) {
-		return function badValue() {
-			replaceBefore( 'beep boop', 'beep', value );
-		};
-	}
-});
-
 tape( 'the function replaces the substring before the first occurrence of a specified search string', function test( t ) {
-	var replacement;
 	var expected;
 	var actual;
-	var str;
 
-	str = 'beep boop';
-	replacement = 'foo';
-	actual = replaceBefore( str, ' ', replacement );
+	actual = replaceBefore( 'beep boop', ' ', 'foo' );
 	expected = 'foo boop';
 	t.strictEqual( actual, expected, 'returns expected value' );
 
-	str = 'beep boop';
-	replacement = 'foo';
-	actual = replaceBefore( str, 'p', replacement );
+	actual = replaceBefore( 'beep boop', 'p', 'foo' );
 	expected = 'foop boop';
 	t.strictEqual( actual, expected, 'returns expected value' );
 
-	str = 'Hello, World!';
-	replacement = 'foo';
-	actual = replaceBefore( str, 'o', replacement );
+	actual = replaceBefore( 'Hello, World!', 'o', 'foo' );
 	expected = 'fooo, World!';
 	t.strictEqual( actual, expected, 'returns expected value' );
 
@@ -141,45 +52,33 @@ tape( 'the function replaces the substring before the first occurrence of a spec
 });
 
 tape( 'the function replaces the substring before the first occurrence of a specified search string (Unicode characters)', function test( t ) {
-	var replacement;
 	var expected;
 	var actual;
-	var str;
 
-	str = 'beep 😀 boop 😀 baz';
-	replacement = 'foo';
-	actual = replaceBefore( str, '😀', replacement );
+	actual = replaceBefore( 'beep 😀 boop 😀 baz', '😀', 'foo' );
 	expected = 'foo😀 boop 😀 baz';
 	t.strictEqual( actual, expected, 'returns expected value' );
 
-	str = '🤖 Robot army 🤖!';
-	replacement = 'foo';
-	actual = replaceBefore( str, '🤖', replacement );
+	actual = replaceBefore( '🤖 Robot army 🤖!', '🤖', 'foo' );
 	expected = 'foo🤖 Robot army 🤖!';
+	t.strictEqual( actual, expected, 'returns expected value' );
 
-	str = '🐺 Wolf brothers 🐺';
-	replacement = 'foo';
-	actual = replaceBefore( str, 'o', replacement );
+	actual = replaceBefore( '🐺 Wolf brothers 🐺', 'o', 'foo' );
 	expected = 'fooolf brothers 🐺';
+	t.strictEqual( actual, expected, 'returns expected value' );
 
 	t.end();
 });
 
 tape( 'the function returns the entire string if the search string is not found', function test( t ) {
-	var replacement;
 	var expected;
 	var actual;
-	var str;
 
-	str = 'beep boop';
-	replacement = 'foo';
-	actual = replaceBefore( str, 'z', replacement );
+	actual = replaceBefore( 'beep boop', 'z', 'foo' );
 	expected = 'beep boop';
 	t.strictEqual( actual, expected, 'returns expected value' );
 
-	str = 'beep boop';
-	replacement = 'foo';
-	actual = replaceBefore( str, 'baz', replacement );
+	actual = replaceBefore( 'beep boop', 'baz', 'foo' );
 	expected = 'beep boop';
 	t.strictEqual( actual, expected, 'returns expected value' );
 
@@ -187,14 +86,10 @@ tape( 'the function returns the entire string if the search string is not found'
 });
 
 tape( 'the function returns the entire string if the search string is the empty string', function test( t ) {
-	var replacement;
 	var expected;
 	var actual;
-	var str;
 
-	str = 'beep boop';
-	replacement = 'foo';
-	actual = replaceBefore( str, '', replacement );
+	actual = replaceBefore( 'beep boop', '', 'foo' );
 	expected = 'beep boop';
 	t.strictEqual( actual, expected, 'returns expected value' );
 
