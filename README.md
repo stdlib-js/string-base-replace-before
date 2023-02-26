@@ -41,7 +41,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import replaceBefore from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-base-replace-before@deno/mod.js';
+import replaceBefore from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-base-replace-before@v0.0.0-deno/mod.js';
 ```
 
 #### replaceBefore( str, search, replacement )
@@ -82,7 +82,7 @@ out = replaceBefore( 'beep boop', 'o', 'bar' );
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-import replaceBefore from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-base-replace-before@deno/mod.js';
+import replaceBefore from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-base-replace-before@v0.0.0-deno/mod.js';
 
 var out = replaceBefore( 'beep boop', 'p', 'see' );
 // returns 'seep boop'
