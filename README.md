@@ -52,7 +52,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import replaceBefore from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-base-replace-before@esm/index.mjs';
+import replaceBefore from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-base-replace-before@v0.1.0-esm/index.mjs';
 ```
 
 #### replaceBefore( str, search, replacement )
@@ -98,7 +98,7 @@ out = replaceBefore( 'beep boop', 'o', 'bar' );
 <body>
 <script type="module">
 
-import replaceBefore from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-base-replace-before@esm/index.mjs';
+import replaceBefore from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-base-replace-before@v0.1.0-esm/index.mjs';
 
 var out = replaceBefore( 'beep boop', 'p', 'see' );
 // returns 'seep boop'
