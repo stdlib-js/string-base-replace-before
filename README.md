@@ -52,6 +52,11 @@ limitations under the License.
 ## Usage
 
 ```javascript
+import replaceBefore from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-base-replace-before@deno/mod.js';
+```
+The previous example will load the latest bundled code from the deno branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/string-base-replace-before/tags). For example,
+
+```javascript
 import replaceBefore from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-base-replace-before@v0.2.1-deno/mod.js';
 ```
 
@@ -93,7 +98,7 @@ out = replaceBefore( 'beep boop', 'o', 'bar' );
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-import replaceBefore from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-base-replace-before@v0.2.1-deno/mod.js';
+import replaceBefore from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-base-replace-before@deno/mod.js';
 
 var out = replaceBefore( 'beep boop', 'p', 'see' );
 // returns 'seep boop'
