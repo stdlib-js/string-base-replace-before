@@ -73,16 +73,19 @@ To view installation and usage instructions specific to each branch build, be su
 var replaceBefore = require( '@stdlib/string-base-replace-before' );
 ```
 
-#### replaceBefore( str, search, replacement )
+#### replaceBefore( str, search, replacement, fromIndex )
 
 Replaces the substring before the first occurrence of a specified search string.
 
 ```javascript
-var out = replaceBefore( 'beep boop', ' ', 'loop' );
+var out = replaceBefore( 'beep boop', ' ', 'loop', 0 );
 // returns 'loop boop'
 
-out = replaceBefore( 'beep boop', 'o', 'bar' );
+out = replaceBefore( 'beep boop', 'o', 'bar', 0 );
 // returns 'baroop'
+
+out = replaceBefore( 'beep boop', 'p', 'bar', 5 );
+// returns 'barp'
 ```
 
 </section>
@@ -97,6 +100,7 @@ out = replaceBefore( 'beep boop', 'o', 'bar' );
 
 -   If a search string is not present in a provided string, the function returns the provided string unchanged.
 -   If a search string is an empty string, the function returns the provided string unchanged.
+-   If `fromIndex` is less than `0` or greater than `str.length`, the search starts at index `0` and `str.length`, respectively.
 
 </section>
 
@@ -113,16 +117,16 @@ out = replaceBefore( 'beep boop', 'o', 'bar' );
 ```javascript
 var replaceBefore = require( '@stdlib/string-base-replace-before' );
 
-var out = replaceBefore( 'beep boop', 'p', 'see' );
+var out = replaceBefore( 'beep boop', 'p', 'see', 0 );
 // returns 'seep boop'
 
-out = replaceBefore( 'Hello World!', 'xyz', 'foo' );
+out = replaceBefore( 'Hello World!', 'xyz', 'foo', 0 );
 // returns 'Hello World!'
 
-out = replaceBefore( 'Hello World!', '', 'foo' );
+out = replaceBefore( 'Hello World!', '', 'foo', 0 );
 // returns 'Hello World!'
 
-out = replaceBefore( '', 'xyz', 'foo' );
+out = replaceBefore( '', 'xyz', 'foo', 0 );
 // returns ''
 ```
 
