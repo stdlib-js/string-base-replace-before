@@ -21,19 +21,17 @@
 
 ### BREAKING CHANGES
 
--   [`693efb2`](https://github.com/stdlib-js/stdlib/commit/693efb2eb159d1cd25c6cffe2440e36e6a14b9b2): resolve negative indices relative to the last character index
--   [`693efb2`](https://github.com/stdlib-js/stdlib/commit/693efb2eb159d1cd25c6cffe2440e36e6a14b9b2): resolve negative indices relative to the last index 
+-   [`693efb2`](https://github.com/stdlib-js/stdlib/commit/693efb2eb159d1cd25c6cffe2440e36e6a14b9b2): resolve negative indices relative to the last index
 
     -   Previously, negative index arguments would resolve to zero and
-    search would start from the beginning of the string. To preserve
-    previous behavior, users should clamp `fromIndex` values to string
-    index bounds before calling into `replaceBefore`.
+        search would start from the beginning of the string. To preserve
+        previous behavior, users should clamp `fromIndex` values to string
+        index bounds before calling into `replaceBefore`.
 
--   [`29d7b0d`](https://github.com/stdlib-js/stdlib/commit/29d7b0dc141e1112af120eab76fa6731b8fdbe78): add support for `fromIndex`
--   [`29d7b0d`](https://github.com/stdlib-js/stdlib/commit/29d7b0dc141e1112af120eab76fa6731b8fdbe78): require `fromIndex` argument 
+-   [`29d7b0d`](https://github.com/stdlib-js/stdlib/commit/29d7b0dc141e1112af120eab76fa6731b8fdbe78): require `fromIndex` argument
 
     -   To migrate, users should provide an explicit `fromIndex` of `0` in
-    order to retain previous behavior.
+        order to retain previous behavior.
 
 </section>
 
@@ -147,11 +145,10 @@ No changes reported for this release.
 
 -   [`3573d92`](https://github.com/stdlib-js/stdlib/commit/3573d92955f1150eae58fb534808b7a30532a1c1): update minimum TypeScript version
 -   [`a7e60d8`](https://github.com/stdlib-js/stdlib/commit/a7e60d8aae80fa67f961db4221263782edc89f99): remove CLI
--   [`a7e60d8`](https://github.com/stdlib-js/stdlib/commit/a7e60d8aae80fa67f961db4221263782edc89f99): remove CLI 
 
     -   This is a \"base\" package, and thus should not normally have a CLI.
-    The CLI has moved to `@stdlib/string-replace-before`. Users relying
-    on the CLI should migrate to using that package.
+        The CLI has moved to `@stdlib/string-replace-before`. Users relying
+        on the CLI should migrate to using that package.
 
 </section>
 
