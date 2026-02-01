@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/string-base-replace-before",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Replace the substring before the first occurrence of a specified search string.",
   "license": "Apache-2.0",
   "author": {
