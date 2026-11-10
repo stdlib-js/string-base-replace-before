@@ -4,7 +4,29 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-10-07)
+## Unreleased (2026-11-10)
+
+<section class="bug-fixes">
+
+### Bug Fixes
+
+-   [`4c83379`](https://github.com/stdlib-js/stdlib/commit/4c8337989191231862b5c98dbdffe492b827c7c0) - ensure support for empty replacement strings [(#16553)](https://github.com/stdlib-js/stdlib/pull/16553)
+
+</section>
+
+<!-- /.bug-fixes -->
+
+<section class="issues">
+
+### Closed Issues
+
+This release closes the following issue:
+
+[#16547](https://github.com/stdlib-js/stdlib/issues/16547)
+
+</section>
+
+<!-- /.issues -->
 
 <section class="commits">
 
@@ -12,6 +34,7 @@
 
 <details>
 
+-   [`4c83379`](https://github.com/stdlib-js/stdlib/commit/4c8337989191231862b5c98dbdffe492b827c7c0) - **fix:** ensure support for empty replacement strings [(#16553)](https://github.com/stdlib-js/stdlib/pull/16553) _(by Aditya Kumar)_
 -   [`c33404a`](https://github.com/stdlib-js/stdlib/commit/c33404ab42f5cd06257f3f02843fa23393884e80) - **style:** remove extra space and address lint failures [(#13263)](https://github.com/stdlib-js/stdlib/pull/13263) _(by Philipp Burckhardt)_
 -   [`a8be8d1`](https://github.com/stdlib-js/stdlib/commit/a8be8d1588388d3f20084bf4431dff14f4c7c7ed) - **docs:** update descriptions [(#13257)](https://github.com/stdlib-js/stdlib/pull/13257) _(by Philipp Burckhardt)_
 -   [`fe7c274`](https://github.com/stdlib-js/stdlib/commit/fe7c2746799f98c42a15f5ab2240676bb9b5987d) - **docs:** fix errors and inconsistencies in `@stdlib/string` TypeScript declarations [(#12390)](https:-/github.com/stdlib-js/stdlib/pull/12390) _(by Philipp Burckhardt, Athan Reines)_
@@ -26,8 +49,9 @@
 
 ### Contributors
 
-A total of 2 people contributed to this release. Thank you to the following contributors:
+A total of 3 people contributed to this release. Thank you to the following contributors:
 
+-   Aditya Kumar
 -   Athan Reines
 -   Philipp Burckhardt
 
